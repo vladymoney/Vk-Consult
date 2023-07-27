@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Услуги</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Add custom styles here */
+      .navbar-brand img {
+        max-height: 40px;
+      }
+
+      .navbar-nav {
+        margin-left: auto;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 10px;
+      }
+
+      .navbar-nav .nav-link {
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Styles for the full-screen slideshow */
+      .carousel {
+        height: 25vh;
+      }
+
+      .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 25vh;
+        position: relative;
+      }
+
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Adjust the last value (0.5) to control the darkness level */
+        z-index: 1;
+      }
+
+      .carousel-item img {
+        /* Make the images darker by applying a filter */
+        filter: brightness(
+          70%
+        ); /* Adjust the percentage (70%) to control the darkness level */
+        transition: filter 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      .carousel-item .carousel-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .carousel-content h3,
+      .carousel-content p {
+        color: #fff; /* Set text color to white */
+      }
+
+      .carousel-content .btn {
+        background-color: transparent; /* Make the button transparent */
+        color: #fff; /* Set text color to white */
+        border: 2px solid #fff; /* Add a white border to the button */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      /* Keep the buttons brighter when hovered */
+      .carousel-content .btn:hover {
+        background-color: #007bff; /* Change the background color on hover */
+        color: #fff; /* Set text color to white on hover */
+      }
+
+      .carousel-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+      }
+
+      .carousel-content h3 {
+        text-align: center;
+        color: #fff; /* Optional, set the color for the h3 text */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Начало</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yslugi.html">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Контакти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prices.html">Цени</a>
+          </li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="carousel-item active"
+      style="background-image: url('images/3.jpg')"
+    >
+      <div class="carousel-content">
+        <h3>Услуги</h3>
+      </div>
+    </div>
+    <main>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 text-center"></div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6" style="margin-top: +200px">
+            <p>
+              Счетоводна кантора ВК Консулт предлага пълно счетоводно и ТРЗ
+              обслужване за вашия бизнес. Ние държим на личната комуникация с
+              клиента и индивидуалното отношение. Разчитайте на нашите
+              професионалисти за бързи и компетентни отговори на вашите въпроси
+              и изисквания. Ние не просто оперативно ще ръководим вашето
+              счетоводство, но ще се стремим да сме ви полезни и с идеи и
+              предложения за развитието на вашия бизнес и оптимизирането на
+              разходите ви.
+            </p>
+            <img src="images/1.webp" alt="Image 1" class="img-fluid" />
+          </div>
+          <div class="col-md-6" style="margin-top: +200px">
+            <img src="images/2.webp" alt="Image 2" class="img-fluid" />
+
+            <p>
+              Счетоводна кантора ВК Консулт предоставя счетоводно обслужване на
+              голям брой компании както на територията на България, така и извън
+              пределите ѝ. Ние Ви предлагаме:
+              <li>Компетентни консултации в удобно за вас време и място</li>
+              <li>Представителство пред финансови институции</li>
+              <li>Разумен хонорар за предлаганите услуги</li>
+              <li>Професионални съвети и решения</li>
+              <li>Личен подход към вас и вашата сфера на работа</li>
+              <li>Лична комуникация с вашия индивидуален счетоводител</li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS and jQuery (Required for Navbar Toggle and Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

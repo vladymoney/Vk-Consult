@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Начало</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Add custom styles here */
+      .navbar-brand img {
+        max-height: 40px;
+      }
+
+      .navbar-nav {
+        margin-left: auto;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 10px;
+      }
+
+      .navbar-nav .nav-link {
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Styles for the full-screen slideshow */
+      .carousel {
+        height: 75vh;
+      }
+
+      .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        position: relative;
+      }
+
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Adjust the last value (0.5) to control the darkness level */
+        z-index: 1;
+      }
+
+      .carousel-item img {
+        /* Make the images darker by applying a filter */
+        filter: brightness(
+          70%
+        ); /* Adjust the percentage (70%) to control the darkness level */
+        transition: filter 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      .carousel-item .carousel-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .carousel-content h3,
+      .carousel-content p {
+        color: #fff; /* Set text color to white */
+      }
+
+      .carousel-content .btn {
+        background-color: transparent; /* Make the button transparent */
+        color: #fff; /* Set text color to white */
+        border: 2px solid #fff; /* Add a white border to the button */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      /* Keep the buttons brighter when hovered */
+      .carousel-content .btn:hover {
+        background-color: #007bff; /* Change the background color on hover */
+        color: #fff; /* Set text color to white on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Начало</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yslugi.html">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Контакти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prices.html">Цени</a>
+          </li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Full-Screen Bootstrap Carousel -->
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="background-image: url('images/cat_449.jpg')"
+        >
+          <div class="carousel-content">
+            <h3>Счетоводна кантора ВК Консулт</h3>
+            <p>
+              Изборът на правилния счетоводител е един от най-важните за
+              бъдещето на вашия бизнес.
+            </p>
+            <a href="contact.html">
+              <button class="btn">Контакти</button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="background-image: url('images/description_course_121.jpg')"
+        >
+          <div class="carousel-content">
+            <h3>Счетоводни услуги</h3>
+            <p>Бързи и компетентни решения на вашите въпроси и изисквания</p>
+            <a href="yslugi.html">
+              <button class="btn">Услуги</button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="background-image: url('images/schetovodni-uslugi.jpg')"
+        >
+          <div class="carousel-content">
+            <h3>Цени</h3>
+            <p>Фактори, от които зависи цената на счетоводното обслужване</p>
+           
+            <a href="prices.html">
+              <button class="btn">Цени</button>
+            </a>
+            </a>
+          </div>
+        </div>
+        <!-- Add more carousel items with background images and content -->
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExample"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExample"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <h2>За Нас</h2>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6" style="margin-top: +75px">
+            <h3>Предмет на дейност</h3>
+            <p>
+              Покупко-продажба на стоки и продукти от всякакъв вид, обработване,
+              търговия със стоки от земеделски произход, покупко-продажба на
+              промишлени, хранителни и други стоки, кафетерия, ресторантьорство,
+              преработване и пакетиране на стоки и продукти от собствено
+              производство или други такива; преработване, пакетиране и продажба
+              на месо и месни продукти от всякакъв вид, търговия и услуги от
+              всякакъв вид в страната и чужбина; рент а кар (коли под наем);
+              сделки по търговско представителство, търговско агентство,
+              спедиционни и превозни сделки и комисионно посредничество на стоки
+              и услуги при взаимоотношения с български и чуждестранни компании;
+              производство на търговски артикули в страната и чужбина, както и
+              други дейности, в случай, че не са забранени от закона, в т.ч. и
+              строително-монтажни дейности включващи: бояджийски услуги, фаянс,
+              мазилки, изграждане на вик инсталации, зидария, гипсокартон,
+              изграждане на електрически инсталации, топлоизолация и изолация на
+              сгради и помещения, полагане на бетон и поставяне на арматура;
+              маркетинг и търговия;строителен надзор; конструкция на скеле за
+              сгради; както и всяка друга дейност, която не е забранена със
+              закон, включително и такава, за осъществяването на която се
+              изисква лиценз, разрешение, регистрация или уведомление – след
+              получаване на съответния лиценз,
+            </p>
+            <img src="images/cat_449.jpg" alt="Image 1" class="img-fluid" />
+          </div>
+          <div class="col-md-6" style="margin-top: +75px">
+            <img
+              src="images/description_course_121.jpg"
+              alt="Image 2"
+              class="img-fluid"
+            />
+            <h3>Предмет на дейност</h3>
+            <p>
+              Разрешение, регистрация или уведомление; сделки по производство,
+              дистрибуция, преработка, внос, износ, покупка и продажба на
+              промишлени и непромишлени стоки предназначени за битови и
+              индустриални потребители /включително и сервизиране/ на оборудване
+              и консумативи за опаковане, бутилиране, етикетиране, маркиране и
+              палетизиране покупка на стоки или други вещи с цел продажба в
+              първоначален, преработен или обработен вид в страната и в чужбина;
+              продажба и търговия в страната и в чужбина на стоки от собствено
+              производство; сделки по производство, преработка, опаковка,
+              манипулация, дистрибуция, внос, износ и продажба на плодове и
+              зеленчуци, преработена и непреработена земеделска продукция;
+              международен транспорт на пътници и товари; туристически,
+              рекламни, информационни, програмни, компютърни и интернет услуги,
+              онлайн магазин; складови сделки; лицензионни сделки; стоков
+              контрол; сделки с интелектуална собственост; хотелиерски,
+              консултантски и други услуги; покупка, строеж или обзавеждане на
+              недвижими имоти с цел продажба, фризьорски, козметични,
+              счетоводни, консултантски и други услуги; както и всякакви други
+              дейности, които не са забранени от действащото в Република
+              България законодателство (като дейностите, за които е необходимо
+              лиценз, ще се извършват след получаването на такъв)
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<style>
+    .centered-text {
+        margin-top: -185px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+</style>
+    <footer>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" style="margin-bottom: +50px;">
+            <div class="carousel-item active" style="background-image: url('images/4.jpg'); height: 500px; /* Add this to make the container wrap tightly around its content */
+            ">
+                <div class="carousel-content">
+                    <h1 class="centered-text">Търсите професионално и коректно счетоводно обслужване за вашия бизнес?</h1>
+                    <a href="contact.html" class="btn" style="position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #fff;
+                    margin-top: -50px;">Свържи се със нас</a>
+                </div>
+            </div>
+        </footer>
+
+            
+
+    <!-- Bootstrap JS and jQuery (Required for Navbar Toggle and Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

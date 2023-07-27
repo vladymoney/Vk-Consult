@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Цени</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      /* Add custom styles here */
+      .navbar-brand img {
+        max-height: 40px;
+      }
+
+      .navbar-nav {
+        margin-left: auto;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 10px;
+      }
+
+      .navbar-nav .nav-link {
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Styles for the full-screen slideshow */
+      .carousel {
+        height: 25vh;
+      }
+
+      .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 25vh;
+        position: relative;
+      }
+
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Adjust the last value (0.5) to control the darkness level */
+        z-index: 1;
+      }
+
+      .carousel-item img {
+        /* Make the images darker by applying a filter */
+        filter: brightness(
+          70%
+        ); /* Adjust the percentage (70%) to control the darkness level */
+        transition: filter 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      .carousel-item .carousel-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .carousel-content h3,
+      .carousel-content p {
+        color: #fff; /* Set text color to white */
+      }
+
+      .carousel-content .btn {
+        background-color: transparent; /* Make the button transparent */
+        color: #fff; /* Set text color to white */
+        border: 2px solid #fff; /* Add a white border to the button */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      /* Keep the buttons brighter when hovered */
+      .carousel-content .btn:hover {
+        background-color: #007bff; /* Change the background color on hover */
+        color: #fff; /* Set text color to white on hover */
+      }
+
+      .carousel-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+      }
+
+      .carousel-content h3 {
+        text-align: center;
+        color: #fff; /* Optional, set the color for the h3 text */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Начало</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yslugi.html">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Контакти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prices.html">Цени</a>
+          </li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="carousel-item active"
+      style="background-image: url('images/5.jpg')"
+    >
+      <div class="carousel-content">
+        <h3>Цени</h3>
+      </div>
+    </div>
+
+    <div class="container text-center" style="margin-top: +350px">
+      <!-- Add the 'container text-center' classes to center the content -->
+      <h1>За фирми без регистрация по ЗДДС:</h1>
+
+      <p>Цената на счетоводното обслужване зависи от следните фактори:</p>
+      <ul>
+        <li>
+          Вида на дейност на вашата фирма – услуги, търговия, производство и
+          т.н.
+        </li>
+        <li>
+          Правната форма, под която съществува вашето дружество – ЕООД, ООД, ЕТ,
+          АД и др.
+        </li>
+        <li>Обема от документи, които вашия бизнес генерира</li>
+        <li>Броя и вида на осигурените лица</li>
+      </ul>
+
+      <div class="table-responsive">
+        <!-- Add 'table-responsive' class to make the table responsive -->
+        <table class="table table-bordered mx-auto">
+          <!-- Add 'table' and 'table-bordered mx-auto' classes to center the table -->
+          <thead>
+            <tr>
+              <th>Брой документи</th>
+              <th>Цена на месец в лв.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>до 20 док./месец</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>до 40 док./месец</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>до 70 док./месец</td>
+              <td>130</td>
+            </tr>
+            <tr>
+              <td>над 70 док./месец</td>
+              <td>По договаряне</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h1>За фирми регистрирани по ЗДДС:</h1>
+
+      <div class="table-responsive">
+        <!-- Add 'table-responsive' class to make the table responsive -->
+        <table class="table table-bordered mx-auto">
+          <!-- Add 'table' and 'table-bordered mx-auto' classes to center the table -->
+          <thead>
+            <tr>
+              <th>Брой документи</th>
+              <th>Цена на месец в лв.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>до 20 док./месец</td>
+              <td>140</td>
+            </tr>
+            <tr>
+              <td>до 40 док./месец</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>до 70 док./месец</td>
+              <td>270</td>
+            </tr>
+            <tr>
+              <td>над 70 док./месец</td>
+              <td>По договаряне</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Цените на горепосочените услуги важат за фирми с персонал до 1 човек.
+      </p>
+      <h1>При по-голям брой персонал се добавят следните суми:</h1>
+
+      <div class="table-responsive">
+        <!-- Add 'table-responsive' class to make the table responsive -->
+        <table class="table table-bordered mx-auto">
+          <!-- Add 'table' and 'table-bordered mx-auto' classes to center the table -->
+          <thead>
+            <tr>
+              <th>Брой персонал</th>
+              <th>Увеличение на горепосочената цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>до 20 служители</td>
+              <td>20 лв. на служител</td>
+            </tr>
+            <tr>
+              <td>над 20 служители</td>
+              <td>15 лв. на служител</td>
+            </tr>
+            <tr>
+              <td>Feature Z</td>
+              <td>$400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Посочените цени важат при сключен едногодишен договор за счетоводно
+        обслужване, който включва:
+      </p>
+      <ul>
+        <li>Годишно счетоводно приключване</li>
+        <li>Изготвяне и подаване на годишен финансов отчет</li>
+        <li>Подаване на годишна данъчна декларация</li>
+        <li>ТРЗ обслужване, относно самоосигуряващо се лице</li>
+      </ul>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (Required for Navbar Toggle and Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

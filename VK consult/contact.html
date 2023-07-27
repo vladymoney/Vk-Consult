@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Контакти</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      /* Add custom styles here */
+      .navbar-brand img {
+        max-height: 40px;
+      }
+
+      .navbar-nav {
+        margin-left: auto;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 10px;
+      }
+
+      .navbar-nav .nav-link {
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Styles for the full-screen slideshow */
+      .carousel {
+        height: 25vh;
+      }
+
+      .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 25vh;
+        position: relative;
+      }
+
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Adjust the last value (0.5) to control the darkness level */
+        z-index: 1;
+      }
+
+      .carousel-item img {
+        /* Make the images darker by applying a filter */
+        filter: brightness(
+          70%
+        ); /* Adjust the percentage (70%) to control the darkness level */
+        transition: filter 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      .carousel-item .carousel-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .carousel-content h3,
+      .carousel-content p {
+        color: #fff; /* Set text color to white */
+      }
+
+      .carousel-content .btn {
+        background-color: transparent; /* Make the button transparent */
+        color: #fff; /* Set text color to white */
+        border: 2px solid #fff; /* Add a white border to the button */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Optional transition for smooth effect */
+      }
+
+      /* Keep the buttons brighter when hovered */
+      .carousel-content .btn:hover {
+        background-color: #007bff; /* Change the background color on hover */
+        color: #fff; /* Set text color to white on hover */
+      }
+
+      .carousel-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+      }
+
+      .carousel-content h3 {
+        text-align: center;
+        color: #fff; /* Optional, set the color for the h3 text */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="home.html">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Начало</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yslugi.html">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Контакти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prices.html">Цени</a>
+          </li>
+          <!-- Add more navigation items as needed -->
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="carousel-item active"
+      style="background-image: url('images/schetovodni-uslugi.jpg')"
+    >
+      <div class="carousel-content">
+        <h3>Контакти</h3>
+      </div>
+    </div>
+
+    <main>
+      <div class="container" style="margin-top: +400px">
+        <div class="row">
+          <div class="col-md-6">
+            <section>
+              <h1>Свържи се със нас</h1>
+              <form action="https://formspree.io/f/xwkdpgra" method="POST">
+                <div class="form-group">
+                  <label for="name">Име:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Телефон:</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Съобщение:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="form-control"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Изпрати</button>
+              </form>
+            </section>
+          </div>
+
+          <div class="col-md-6">
+            <section>
+              <h2>Информация</h2>
+              <p><i class="fas fa-envelope"></i> Имейл: info@example.com</p>
+              <p><i class="fas fa-phone"></i> Телефон: +359 88 894 3983</p>
+              <p>
+                <i class="far fa-clock"></i> Работно време: Понеделник до Петък,
+                9:00 - 17:00
+              </p>
+              <!-- Add your Google Map embed code here -->
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="embed-responsive embed-responsive-16by9"
+      style="margin-top: 50px; height: 500px"
+    >
+      <iframe
+        class="embed-responsive-item"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.2879514070527!2d23.207460769663374!3d41.39250949820619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aa29ea822753a1%3A0xaf87c798a696bf76!2z0YPQuy4g4oCe0JLQsNGA0LTQsNGA4oCcIDQsIDI4NTAg0KbQtdC90YLRitGALCDQn9C10YLRgNC40Yc!5e0!3m2!1sbg!2sbg!4v1690449536927!5m2!1sbg!2sbg"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (Required for Navbar Toggle and Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
